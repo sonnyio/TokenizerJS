@@ -1,0 +1,14 @@
+{
+  "name": "tokenizerjs",
+  "version": "1.0.0",
+  "description": "TokenizerJS will Tokenize an input and return information on starting and ending positions of each token.",
+  "main": "TokenizerJS.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "tlds": "^1.187.0"
+  },
+  "author": "Sonny Trujillo Jr. <strujillo.jr@gmail.com>",
+  "license": "ISC"
+}

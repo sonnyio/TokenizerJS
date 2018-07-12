@@ -57,6 +57,7 @@ A hashtag is a starts with the `#` followed by an one or more alphanumeric chara
 ### Clickable Links
 A Clickable Link is a URL that a user would expect to be able to click on. This could be something simple like `google.com` or more complex like `https://google.com` etc. The goal is to identify potential links that follow the above format. Using something like `url.parse("google.com")` will fail, even though a user would expect to be able to click on that link.
 
+```
  ┌─────────────────────────────────────────────────────────────────────────────────────┐
  │                                            Link Token                               │
  ├──────────┬──┬─────────────────────┬─────────────────────┬───────────────────────────┤
@@ -66,6 +67,8 @@ A Clickable Link is a URL that a user would expect to be able to click on. This 
  "  https:   //    user   :   pass   @ sub.host.com : 8080   /p/a/t/h  ?  query=string "
  │          │  │                     │   hostname     port │                           │
  └──────────┴──┴─────────────────────┴─────────────────────┴───────────────────────────┘
+ ```
+ 
 
 ```
 Clickable Link Grammar

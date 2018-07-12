@@ -4,11 +4,6 @@ var TokenizerJS = require('../TokenizerJS.js');
 
 describe('TokenizerJS', function() {
   describe("Hashtags", function() {
-    it("hmm", function(){
-      var result = TokenizerJS("Hello @sonny what do you think about #tokenization? Follow me at twitter.com/sonnytrujillojr");
-      console.log(JSON.stringify(result, null, 2));
-    });
-    
     it('should recognize simple hashtag', function() {
       var result =  TokenizerJS("Hello #world");
 

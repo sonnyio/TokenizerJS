@@ -33,16 +33,7 @@ The above input returns the following entities object
   "links": [
     {
       "elements": {
-        "protocol": {
-          "required": false,
-          "value": 72
-        },
-        "auth": {
-          "required": false,
-          "value": 92
-        },
         "host": {
-          "required": true,
           "value": {
             "host": [
               "twitter",
@@ -56,7 +47,6 @@ The above input returns the following entities object
           }
         },
         "path": {
-          "required": false,
           "value": {
             "path": [
               "",

@@ -103,27 +103,28 @@ Link.parse = function(start, text){
     }
   }
 
+  var results = {};
   var keys = Object.keys(elements);
 
   for(var j = 0; j < keys.length; j++){
     var key = keys[j];
     var token = elements[key].tokenizer.parse(i, text);
 
-    elements[key].value = token;
-    
     if(typeof token != 'number'){
+      results[key] = {
+        value: token
+      }
+
       i = token.end+1;
       value += token.value;
     }
     else if(elements[key].required){
       return token;
     }
-
-    delete elements[key].tokenizer;    
   };
 
   if(value.length > 0){
-    return new Link(start, value, elements);
+    return new Link(start, value, results);
   }
 
   return i;

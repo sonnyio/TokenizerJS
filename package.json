@@ -1,5 +1,5 @@
 {
-  "name": "tokenizerjs",
+  "name": "@sonny/tokenizerjs",
   "version": "1.0.0",
   "description": "TokenizerJS will Tokenize an input and return information on starting and ending positions of each token.",
   "main": "TokenizerJS.js",

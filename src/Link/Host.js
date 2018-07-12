@@ -81,10 +81,14 @@ Host.parse = function(start, text){
   }
 
   if(hostParts.length > 0 && (port.length == 0 || (port.length >= 2 && port.length <= 5))){
-    if(hostParts.length == 1 && hostParts[0] == "localhost"){
-      return new Host(start, value, hostParts, port);
+    if(hostParts.length == 1){
+      if(hostParts[0] == "localhost"){
+        return new Host(start, value, hostParts, port);
+      }
+      
+      return i;
     }
-    if(tlds.indexOf(hostParts[hostParts.length - 1]) != -1){
+    else if(tlds.indexOf(hostParts[hostParts.length - 1]) != -1){
       return new Host(start, value, hostParts, port);
     }
   }

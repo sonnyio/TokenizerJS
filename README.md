@@ -5,6 +5,77 @@ TokenizerJS takes a string as input and returns starting and ending positions an
 
 > I learned about Tokenization in a course on compiler construction and i've written a tutorial on this on my block `https://sonny.io/...`. If you're unfamiliar with Tokenization and would like more advanded reading on the subject check out http://www.cs.man.ac.uk/~pjj/farrell/comp3.html and the wikipedia page on Lexical Analysis https://en.wikipedia.org/wiki/Lexical_analysis
 
+# How To Use
+
+Include TokenizerJS into your project and then simply call `TokenizerJS(...)`  with your string. An entities object will be returned.
+
+```
+var TokenizerJS = require("TokenizerJS");
+var result = TokenizerJS("Hello @sonny what do you think about #tokenization? Follow me at twitter.com/sonnytrujillojr");
+```
+The above input returns the following entities object
+```
+{
+  "hashtags": [
+    {
+      "start": 37,
+      "end": 49,
+      "value": "#tokenization"
+    }
+  ],
+  "mentions": [
+    {
+      "start": 6,
+      "end": 11,
+      "value": "@sonny"
+    }
+  ],
+  "links": [
+    {
+      "elements": {
+        "protocol": {
+          "required": false,
+          "value": 72
+        },
+        "auth": {
+          "required": false,
+          "value": 92
+        },
+        "host": {
+          "required": true,
+          "value": {
+            "host": [
+              "twitter",
+              "com"
+            ],
+            "tld": "com",
+            "port": "",
+            "start": 65,
+            "end": 75,
+            "value": "twitter.com"
+          }
+        },
+        "path": {
+          "required": false,
+          "value": {
+            "path": [
+              "",
+              "sonnytrujillojr"
+            ],
+            "start": 76,
+            "end": 91,
+            "value": "/sonnytrujillojr"
+          }
+        }
+      },
+      "start": 65,
+      "end": 91,
+      "value": "twitter.com/sonnytrujillojr"
+    }
+  ]
+}
+```
+
 ## Entities Object
 TokenizerJS returns an Entities object that contains an array of Hashtags, Mentions, and Links.
 

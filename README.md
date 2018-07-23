@@ -3,7 +3,7 @@
 
 TokenizerJS takes a string as input and returns starting and ending positions and the values of the tokens found within that text. Out of the box, this tokenizer will find Mentions, Hashtags, and Clickable Links. It can easily be extended by created a new Token.
 
-> I learned about Tokenization in a course on compiler construction and i've written a tutorial on this on my block `https://sonny.io/...`. If you're unfamiliar with Tokenization and would like more advanded reading on the subject check out http://www.cs.man.ac.uk/~pjj/farrell/comp3.html and the wikipedia page on Lexical Analysis https://en.wikipedia.org/wiki/Lexical_analysis
+> I learned about Tokenization in a course on compiler construction and i've written a tutorial on this at `https://medium.com/@sonnytrujillo/how-to-parse-hashtags-and-mentions-with-a-tokenizer-in-nodejs-e7756730b573`. If you're unfamiliar with Tokenization and would like more advanded reading on the subject check out http://www.cs.man.ac.uk/~pjj/farrell/comp3.html and the wikipedia page on Lexical Analysis https://en.wikipedia.org/wiki/Lexical_analysis
 
 # How To Use
 

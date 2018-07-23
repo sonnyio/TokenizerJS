@@ -10,10 +10,6 @@ let Mention = require("./src/Mention.js");
  *   hashtags, mentions, and links.
  */
 module.exports = (text) => {
-  var start = 0;
-  var value = "";  
-  var tokens = [];
-  
   var entities = {
     hashtags: [],
     mentions: [],
